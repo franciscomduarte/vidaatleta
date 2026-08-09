@@ -4,21 +4,21 @@ const AUDIENCES = [
     title: "Acompanhe cada prova do seu filho.",
     body: "Saiba a série, a raia e o horário. Receba o tempo oficial no instante em que ele toca a borda — de onde você estiver.",
     link: "Notificação ao vivo",
-    gradient: "from-[#0d4ccb] to-navy-950",
+    gradient: "from-brand to-navy-950",
   },
   {
     eyebrow: "Atletas",
     title: "Veja seu tempo cair, centésimo a centésimo.",
     body: "PBs, evolução por prova e sua posição no ranking da sua UF e nacional. Saiba exatamente quanto falta para subir.",
     link: "Evolução por prova",
-    gradient: "from-[#0a3fab] to-navy-950",
+    gradient: "from-navy-900 to-navy-950",
   },
   {
     eyebrow: "Fãs da natação",
     title: "Viva a competição em tempo real.",
     body: "Favorite atletas e clubes, acompanhe as séries ao vivo e veja os resultados oficiais assim que eles saem.",
     link: "Provas ao vivo",
-    gradient: "from-[#082c46] to-navy-950",
+    gradient: "from-navy-950 to-navy-950",
   },
 ];
 
