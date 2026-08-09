@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, Hanken_Grotesk } from "next/font/google";
 import Link from "next/link";
+import { MobileNav } from "@/components/MobileNav";
 import "./globals.css";
 
 const sora = Sora({
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sora.variable} ${hanken.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-page text-primary">
-        <header className="bg-navy-950 text-white">
+        <header className="relative z-40 bg-navy-950 text-white">
           <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
             <Link href="/" className="font-display font-extrabold text-lg tracking-tight">
               Vida de Atleta
@@ -59,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 </Link>
               ))}
             </nav>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <span className="hidden sm:inline text-sm font-medium text-white/70">
                 Entrar
               </span>
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               >
                 Buscar atleta
               </Link>
+              <MobileNav items={NAV} />
             </div>
           </div>
         </header>

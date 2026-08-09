@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
+import { AthleteAvatar } from "@/components/ui/AthleteAvatar";
 import { PROVAS, getRanking } from "@/lib/mock-data";
 import { formatTempo } from "@/lib/format";
 import type { Piscina } from "@/lib/types";
@@ -87,11 +87,16 @@ export default function RankingsPage() {
                   <td className="px-5 py-3">
                     <Link
                       href={`/atleta/${linha.atleta.registro}`}
-                      className="font-semibold hover:text-brand"
+                      className="flex items-center gap-3 font-semibold hover:text-brand"
                     >
-                      {linha.atleta.nome}
+                      <AthleteAvatar nome={linha.atleta.nome} size="sm" />
+                      <span>
+                        {linha.atleta.nome}
+                        <span className="block text-secondary text-xs font-normal">
+                          {linha.atleta.clube}
+                        </span>
+                      </span>
                     </Link>
-                    <div className="text-secondary text-xs">{linha.atleta.clube}</div>
                   </td>
                   <td className="px-5 py-3 text-secondary">{linha.atleta.uf}</td>
                   <td className="px-5 py-3 text-secondary">{linha.atleta.categoria}</td>

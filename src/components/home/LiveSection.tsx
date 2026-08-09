@@ -1,8 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { getAtleta, getResultadosDoCampeonato } from "@/lib/mock-data";
 import { formatTempo } from "@/lib/format";
+import { IMAGES } from "@/lib/images";
+
+function AoVivoPulse() {
+  return (
+    <span className="relative flex h-2.5 w-2.5">
+      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-coral opacity-75" />
+      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-coral" />
+    </span>
+  );
+}
 
 const BULLETS = [
   { titulo: "Prova e série ao vivo", desc: "Acompanhe cada bateria enquanto ela acontece, sem esperar o boletim." },
@@ -13,15 +24,39 @@ const BULLETS = [
 
 export function LiveSection() {
   const resultados = getResultadosDoCampeonato("brasileiro-interclubes-2026")
-    .filter((r) => r.prova.id === "100-livre" && r.resultado.piscina === "50m")
+    .filter(
+      (r) =>
+        r.prova.id === "100-livre" &&
+        r.resultado.piscina === "50m" &&
+        getAtleta(r.resultado.atletaRegistro)?.sexo === "M"
+    )
+    .sort((a, b) => a.resultado.tempoCentesimos - b.resultado.tempoCentesimos)
     .slice(0, 4);
 
+  const textura = IMAGES["live.pool-texture"];
+
   return (
-    <section className="bg-navy-950 text-white">
-      <div className="mx-auto max-w-6xl px-6 py-20 grid gap-12 lg:grid-cols-2 items-center">
+    <section className="relative overflow-hidden bg-navy-950 text-white">
+      {textura.src && (
+        <Image
+          src={textura.src}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-[0.08]"
+        />
+      )}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, var(--navy-950) 0%, rgba(10,27,61,0.85) 40%, var(--navy-950) 100%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-20 grid gap-12 lg:grid-cols-2 items-center">
         <div>
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-coral">
-            <span className="h-1.5 w-1.5 rounded-full bg-coral animate-pulse" />
+            <AoVivoPulse />
             Competição ao vivo
           </span>
           <h2 className="mt-3 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance">
@@ -46,8 +81,11 @@ export function LiveSection() {
 
         <Card className="bg-navy-900 border-white/10 overflow-hidden">
           <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-            <div className="flex items-center gap-2">
-              <Badge tone="live">Ao vivo</Badge>
+            <div className="flex items-center gap-2.5">
+              <Badge tone="live" className="!animate-none gap-1.5">
+                <AoVivoPulse />
+                Ao vivo
+              </Badge>
               <span className="text-sm text-white/70">15:47 BRT</span>
             </div>
             <span className="text-xs text-white/50">Piscina 50m · São Paulo</span>

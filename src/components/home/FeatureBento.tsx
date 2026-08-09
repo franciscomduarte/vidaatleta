@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
+import { AthleteAvatar } from "@/components/ui/AthleteAvatar";
 import { ATLETAS, getMelhorTempo, getRanking } from "@/lib/mock-data";
 import { formatTempo } from "@/lib/format";
 
@@ -42,9 +43,14 @@ export function FeatureBento() {
                       {l.posicao}
                     </td>
                     <td className="py-2.5">
-                      <div className="font-medium">{l.atleta.nome}</div>
-                      <div className="text-xs text-white/50">
-                        {l.atleta.clube} · {l.atleta.uf}
+                      <div className="flex items-center gap-2.5">
+                        <AthleteAvatar nome={l.atleta.nome} size="sm" />
+                        <div>
+                          <div className="font-medium">{l.atleta.nome}</div>
+                          <div className="text-xs text-white/50">
+                            {l.atleta.clube} · {l.atleta.uf}
+                          </div>
+                        </div>
                       </div>
                     </td>
                     <td className="py-2.5 text-right font-display font-semibold tabular-nums">
@@ -107,17 +113,13 @@ export function FeatureBento() {
           </div>
           <div className="flex -space-x-2">
             {favoritos.map((a) => (
-              <span
+              <AthleteAvatar
                 key={a.registro}
+                nome={a.nome}
                 title={a.nome}
-                className="grid h-9 w-9 place-items-center rounded-full border-2 border-card bg-brand text-xs font-bold text-white"
-              >
-                {a.nome
-                  .split(" ")
-                  .map((n) => n[0])
-                  .slice(0, 2)
-                  .join("")}
-              </span>
+                size="md"
+                className="border-2 border-card"
+              />
             ))}
           </div>
         </Card>

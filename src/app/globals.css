@@ -1,18 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Paleta extraída do CSS de produção do cbda.org.br (AppBar, dropdown,
-     tiles de ranking/recordes, gradiente "TV CBDA") — cores oficiais da
-     CBDA aplicadas à identidade do Vida de Atleta. */
-  --blue-500: #114e8b; /* azul primário CBDA (AppBar, botões) */
-  --blue-400: #72d2ff; /* ciano de destaque CBDA, para contraste no escuro */
-  --lime-500: #f9af0d; /* dourado CBDA (tag "natação", tiles, gradiente TV CBDA) */
-  --lime-600: #e8b825; /* dourado mais profundo (gradiente, hover) */
-  --coral-500: #d32f2f; /* vermelho de erro/urgência do tema CBDA */
-  --green-500: #009c49; /* verde CBDA (tag "nado artístico") */
-  --navy-950: #00103b; /* navy quase preto do dropdown CBDA */
-  --navy-900: #0d3e90; /* navy-azul do banner "medalhistas" CBDA */
-  --navy-800: #114e8b; /* mesmo azul primário, como superfície sobre navy-950 */
+  /* Identidade Vida de Atleta: navy escuro + dourado. */
+  --blue-500: #114e8b; /* azul secundário (links, botões outline) */
+  --blue-400: #72d2ff; /* ciano de contraste no escuro */
+  --lime-500: #f5b301; /* dourado da marca (CTAs, destaques) */
+  --lime-600: #cf9600; /* dourado mais profundo (hover, badges) */
+  --coral-500: #d32f2f; /* vermelho de erro/urgência */
+  --green-500: #009c49; /* verde (tempo mais rápido) */
+  --navy-950: #0a1b3d; /* navy da marca (fundo hero/header/footer) */
+  --navy-900: #0f2350; /* navy um tom mais claro, para cards sobre navy-950 */
+  --navy-800: #16305f; /* navy ainda mais claro, hover/superfícies elevadas */
   --slate-100: #dde6f1;
   --slate-200: #c4d2e2;
   --slate-500: #51627a;
@@ -57,6 +55,7 @@
   --color-coral: var(--coral);
   --color-navy-950: var(--navy-950);
   --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
   --font-display: var(--font-display), system-ui, sans-serif;
   --font-body: var(--font-body), system-ui, sans-serif;
 }
@@ -65,4 +64,20 @@ body {
   background: var(--surface-page);
   color: var(--text-primary);
   font-family: var(--font-body), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }

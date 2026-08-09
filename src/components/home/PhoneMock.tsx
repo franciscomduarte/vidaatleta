@@ -1,24 +1,18 @@
 import { Badge } from "@/components/ui/Badge";
+import { AthleteAvatar } from "@/components/ui/AthleteAvatar";
 import { formatTempo } from "@/lib/format";
 import { getAtleta, getMelhorTempo } from "@/lib/mock-data";
 
 export function PhoneMock() {
   const atleta = getAtleta("376380")!;
   const pb100 = getMelhorTempo(atleta.registro, "100-livre")!;
-  const iniciais = atleta.nome
-    .split(" ")
-    .map((n) => n[0])
-    .slice(0, 2)
-    .join("");
 
   return (
     <div className="w-[280px] rounded-[2rem] border border-white/15 bg-navy-900/90 p-2 shadow-2xl backdrop-blur">
       <div className="rounded-[1.6rem] bg-navy-950 p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-accent text-xs font-bold text-navy-950">
-              {iniciais}
-            </span>
+            <AthleteAvatar nome={atleta.nome} tone="accent" size="sm" />
             <div>
               <div className="text-sm font-semibold text-white">{atleta.nome}</div>
               <div className="text-[11px] text-white/50">{atleta.categoria}</div>
