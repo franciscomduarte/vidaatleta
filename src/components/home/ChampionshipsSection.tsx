@@ -22,11 +22,11 @@ export function ChampionshipsSection() {
               Campeonatos
             </span>
             <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance max-w-xl text-white">
-              Da inscrição ao pódio, tudo num só lugar.
+              Do primeiro nome na lista até o pódio.
             </h2>
           </div>
           <Link href="/campeonatos" className="text-sm font-semibold text-accent hover:opacity-80">
-            Ver todos os campeonatos →
+            Ver calendário completo →
           </Link>
         </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

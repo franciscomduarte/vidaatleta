@@ -36,10 +36,10 @@ export function NewsSection() {
     <section className="bg-navy-950">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <span className="text-xs font-semibold uppercase tracking-widest text-white/50">
-          Notícias &amp; cobertura
+          Direto das piscinas
         </span>
         <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance max-w-xl text-white">
-          O que está acontecendo na água.
+          O que virou manchete essa semana.
         </h2>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {NOTICIAS.map((n) => (

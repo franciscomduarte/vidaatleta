@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PhoneMock } from "./PhoneMock";
 
-const CHIPS = ["Tempos oficiais", "Rankings por UF e nacional", "Competições ao vivo"];
+const CHIPS = ["Tempo oficial, sempre", "Do seu estado ao Brasil inteiro", "Ao vivo, sem atraso"];
 
 export function Hero() {
   return (
@@ -33,27 +33,27 @@ export function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/60">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Natação competitiva · Vida de Atleta
+            Direto da piscina, pra você · Vida de Atleta
           </span>
           <h1 className="mt-5 font-display font-extrabold text-4xl sm:text-6xl tracking-tight text-balance text-white max-w-xl">
-            Cada centésimo <span className="text-accent">conta.</span>
+            Onde o centésimo <span className="text-accent">decide.</span>
           </h1>
           <p className="mt-5 max-w-lg text-lg text-white/70 leading-relaxed">
-            Acompanhe atletas, tempos, rankings, provas e competições ao vivo
-            em um só lugar — antes, durante e depois da piscina.
+            Toda prova, toda raia, todo recorde — do aquecimento à premiação,
+            sem perder o centésimo exato.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/buscar"
               className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-navy-950 hover:brightness-95"
             >
-              Buscar meu atleta
+              Localizar meu atleta
             </Link>
             <Link
               href="/rankings"
               className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
             >
-              Ver rankings
+              Conferir rankings
             </Link>
           </div>
           <Link
@@ -61,7 +61,7 @@ export function Hero() {
             className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-coral hover:text-coral/80"
           >
             <span className="h-2 w-2 rounded-full bg-coral animate-pulse" />
-            Acompanhar competição ao vivo
+            A prova está rolando — acompanhe
             <span aria-hidden>→</span>
           </Link>
           <div className="mt-8 flex flex-wrap gap-2">

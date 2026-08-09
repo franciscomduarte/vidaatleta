@@ -15,24 +15,24 @@ export function ClosingCta() {
           Vida de Atleta
         </span>
         <h2 className="mt-3 font-display font-extrabold text-3xl sm:text-5xl tracking-tight text-balance text-white">
-          Cada centésimo <span className="text-accent">conta.</span>
+          Onde o centésimo <span className="text-accent">decide.</span>
         </h2>
         <p className="mt-3 text-white/70 max-w-md mx-auto">
-          Encontre seu atleta, acompanhe os rankings da sua UF e nacional, e
-          siga as competições ao vivo — tudo ao centésimo.
+          Ache seu atleta, viva os rankings do seu estado e do país, e não
+          perca uma prova — tudo no centésimo exato.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             href="/buscar"
             className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-navy-950 hover:brightness-95"
           >
-            Buscar meu atleta
+            Localizar meu atleta
           </Link>
           <Link
             href="/rankings"
             className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
           >
-            Ver rankings
+            Conferir rankings
           </Link>
         </div>
       </div>

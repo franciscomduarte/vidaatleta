@@ -5,10 +5,10 @@ import { EVOLUCAO_DESTAQUE } from "@/lib/mock-evolucao";
 import { formatDeltaTempo, formatTempo } from "@/lib/format";
 
 const BULLETS = [
-  { titulo: "Evolução por prova", desc: "A curva de cada 100m/50m ao longo das temporadas." },
-  { titulo: "Recordes pessoais", desc: "Toda melhor marca registrada e comparada." },
-  { titulo: "Comparação direta", desc: "Você contra rivais, parceiros, ou o ranking — sabe o quanto." },
-  { titulo: "Tudo ao centésimo", desc: "Ninguém é dispensado. Não existe evolução sem precisão." },
+  { titulo: "Evolução por prova", desc: "Como cada prova sua se comportou, temporada após temporada." },
+  { titulo: "Recordes pessoais", desc: "Toda vez que você se supera, fica registrado." },
+  { titulo: "Comparação direta", desc: "Você contra quem quiser — rival, parceiro de treino ou o próprio ranking." },
+  { titulo: "Tudo ao centésimo", desc: "Sem arredondar. Evolução de verdade se mede no centésimo." },
 ];
 
 function Sparkline({ pontos }: { pontos: number[] }) {
@@ -50,14 +50,15 @@ export function EvolutionSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 grid gap-12 lg:grid-cols-2 items-center">
         <div>
           <span className="text-xs font-semibold uppercase tracking-widest text-secondary">
-            Evolução do atleta
+            Sua trajetória
           </span>
           <h2 className="mt-3 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance">
-            Sua evolução, centésimo a centésimo.
+            De onde você veio até onde vai chegar.
           </h2>
           <p className="mt-2 text-secondary max-w-md">
-            Cada prova vira um ponto na sua curva. Veja seu tempo cair, bata
-            recordes e compare-se com quem importa — temporada após temporada.
+            Cada resultado é um ponto na sua curva. Veja o tempo cair, celebre
+            cada recorde batido e meça-se com quem importa, temporada após
+            temporada.
           </p>
           <ul className="mt-6 space-y-4">
             {BULLETS.map((b) => (

@@ -21,10 +21,10 @@ export function RecordsSection() {
     <section className="bg-card border-y border-subtle">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <span className="text-xs font-semibold uppercase tracking-widest text-secondary">
-          Recordes em destaque
+          Melhores marcas
         </span>
         <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance max-w-xl">
-          Cada marca pessoal, registrada e celebrada.
+          Quando o esforço vira número.
         </h2>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((c) => (

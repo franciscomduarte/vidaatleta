@@ -16,10 +16,10 @@ function AoVivoPulse() {
 }
 
 const BULLETS = [
-  { titulo: "Prova e série ao vivo", desc: "Acompanhe cada bateria enquanto ela acontece, sem esperar o boletim." },
-  { titulo: "Raia e horário", desc: "Saiba onde e quando seu atleta favorito entra na água." },
-  { titulo: "Resultado ao centésimo", desc: "Tempos oficiais no formato MSS.CC, assim que o toque na borda é registrado." },
-  { titulo: "Favoritos notificados", desc: "Quem você segue avisa você quando o resultado sai." },
+  { titulo: "Prova e série ao vivo", desc: "A bateria acontece e você já sabe — nada de esperar o boletim sair." },
+  { titulo: "Raia e horário", desc: "Onde e quando seu atleta entra na água, sem precisar perguntar por aí." },
+  { titulo: "Resultado ao centésimo", desc: "No formato oficial MSS.CC, publicado no instante em que a mão toca a parede." },
+  { titulo: "Favoritos notificados", desc: "Segue alguém? A gente avisa assim que o tempo dele aparece." },
 ];
 
 export function LiveSection() {
@@ -57,14 +57,14 @@ export function LiveSection() {
         <div>
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-coral">
             <AoVivoPulse />
-            Competição ao vivo
+            Rolando agora
           </span>
           <h2 className="mt-3 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance">
-            A prova acontecendo agora.
+            Está acontecendo agora, nesta piscina.
           </h2>
           <p className="mt-2 text-white/70 max-w-md">
-            Prova, série, raia, horário e resultado — o Vida de Atleta traz a
-            emoção da borda da piscina para a palma da sua mão, ao centésimo.
+            Série, raia, horário e resultado — a borda da piscina cabe na
+            palma da sua mão, sem atraso e sem arredondamento.
           </p>
           <ul className="mt-6 space-y-4">
             {BULLETS.map((b) => (
@@ -112,12 +112,12 @@ export function LiveSection() {
             </tbody>
           </table>
           <div className="border-t border-white/10 px-5 py-3 flex items-center justify-between text-xs">
-            <span className="text-white/50">Você favoritou Pedro — resultado notificado.</span>
+            <span className="text-white/50">Pedro é seu favorito — e o tempo dele já está aqui.</span>
             <Link
               href="/campeonatos/brasileiro-interclubes-2026"
               className="font-semibold text-accent hover:text-accent/80"
             >
-              Ver série completa →
+              Ver bateria completa →
             </Link>
           </div>
         </Card>

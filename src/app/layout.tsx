@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sora.variable} ${hanken.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-page text-primary">
-        <header className="relative z-40 bg-navy-950 text-white">
+        <header className="sticky top-0 z-40 bg-navy-950 text-white shadow-lg shadow-black/20">
           <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
             <Link href="/" className="font-display font-extrabold text-lg tracking-tight">
               Vida de Atleta
@@ -68,7 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 href="/buscar"
                 className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-navy-950 hover:brightness-95"
               >
-                Buscar atleta
+                Localizar atleta
               </Link>
               <MobileNav items={NAV} />
             </div>
@@ -82,8 +82,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 Vida de Atleta
               </span>
               <p className="mt-3 max-w-xs text-sm leading-relaxed">
-                Cada centésimo conta. Tempos, rankings e competições de
-                natação, acompanhados do início ao fim.
+                Onde o centésimo decide. Tempo oficial, ranking atualizado e a
+                prova inteira, do início ao fim.
               </p>
             </div>
             <FooterColumn title="Produto" items={FOOTER_PRODUTO} />

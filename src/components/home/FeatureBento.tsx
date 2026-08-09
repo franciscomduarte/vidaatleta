@@ -13,15 +13,14 @@ export function FeatureBento() {
     <section className="bg-card border-y border-subtle">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <span className="text-xs font-semibold uppercase tracking-widest text-secondary">
-          Recursos
+          Por dentro do app
         </span>
         <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance max-w-xl">
-          Tudo o que a natação competitiva precisa.
+          O essencial de uma temporada, num painel só.
         </h2>
         <p className="mt-2 max-w-xl text-secondary">
-          Tempos oficiais, recordes pessoais, rankings, histórico, próximas
-          competições e favoritos — reunidos num só lugar, com a precisão do
-          centésimo.
+          De tempo oficial a recorde pessoal, de ranking a calendário — cada
+          dado que importa, sempre medido ao centésimo.
         </p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
@@ -29,7 +28,7 @@ export function FeatureBento() {
             <div className="flex items-center justify-between">
               <h3 className="font-display font-bold text-lg">Tempos oficiais</h3>
               <Badge tone="brand" className="!bg-white/10 !border-white/10 !text-white/70">
-                Todos oficiais
+                Fonte oficial
               </Badge>
             </div>
             <p className="mt-1 text-sm text-white/60">
@@ -67,7 +66,7 @@ export function FeatureBento() {
               Recordes pessoais
             </span>
             <p className="mt-1 text-sm text-secondary">
-              Cada melhor marca registrada e comparada ao centésimo.
+              A marca a bater, sempre à vista.
             </p>
             <div className="mt-6">
               <span className="text-xs font-semibold uppercase tracking-wide text-secondary">
@@ -87,19 +86,19 @@ export function FeatureBento() {
           <Card className="p-5">
             <h3 className="font-display font-semibold">Rankings</h3>
             <p className="mt-1 text-sm text-secondary">
-              Clube, UF e nacional — atualizado a cada prova.
+              Da sua equipe ao país inteiro, prova a prova.
             </p>
           </Card>
           <Card className="p-5">
             <h3 className="font-display font-semibold">Histórico de competição</h3>
             <p className="mt-1 text-sm text-secondary">
-              Toda a sua trajetória de provas, numa linha do tempo.
+              Sua trajetória inteira, numa linha do tempo.
             </p>
           </Card>
           <Card className="p-5">
             <h3 className="font-display font-semibold">Próximas competições</h3>
             <p className="mt-1 text-sm text-secondary">
-              Calendário, inscrições e contagem regressiva.
+              Datas, inscrição e a contagem pra próxima largada.
             </p>
           </Card>
         </div>
@@ -108,7 +107,7 @@ export function FeatureBento() {
           <div>
             <h3 className="font-display font-semibold">Favoritos</h3>
             <p className="mt-1 text-sm text-secondary">
-              Acompanhe atletas, clubes e provas. Receba o resultado assim que sai.
+              Escolha quem seguir de perto — o resultado chega assim que sai da água.
             </p>
           </div>
           <div className="flex -space-x-2">

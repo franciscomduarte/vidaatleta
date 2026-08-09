@@ -7,10 +7,10 @@ import { getRanking } from "@/lib/mock-data";
 import { formatTempo } from "@/lib/format";
 
 const TILES = [
-  { titulo: "Ranking por UF", desc: "UF ordenado automaticamente." },
-  { titulo: "Ranking nacional", desc: "Todas as provas do país, num lugar." },
-  { titulo: "Clubes e equipes", desc: "Compare por agremiação." },
-  { titulo: "Tempos oficiais", desc: "Em formato MSS.CC, sempre." },
+  { titulo: "Ranking por UF", desc: "Sua UF, sempre atualizada sozinha." },
+  { titulo: "Ranking nacional", desc: "O país inteiro, prova por prova." },
+  { titulo: "Clubes e equipes", desc: "Meça sua equipe contra as outras." },
+  { titulo: "Tempos oficiais", desc: "Sempre no formato oficial MSS.CC." },
 ];
 
 const UFS = ["Nacional", "RS", "SP", "MG", "RJ", "SC", "BA", "PR"];
@@ -26,15 +26,14 @@ export function SearchSection() {
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-xs font-semibold uppercase tracking-widest text-secondary">
-            Abrangência nacional
+            Brasil inteiro
           </span>
           <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance">
-            A natação do Brasil inteiro, em um só lugar.
+            De ponta a ponta do país, numa tabela só.
           </h2>
           <p className="mt-2 text-secondary">
-            Encontre qualquer tempo, de qualquer prova, em qualquer estado —
-            do ranking da sua UF ao ranking nacional, por prova, categoria e
-            clube.
+            Qualquer tempo, de qualquer prova, em qualquer estado do país —
+            filtrado por categoria, clube ou UF, do regional ao nacional.
           </p>
         </div>
 
@@ -53,7 +52,7 @@ export function SearchSection() {
               href="/buscar"
               className="block rounded-lg border border-subtle bg-page px-4 py-2.5 text-sm text-secondary"
             >
-              Buscar atleta, clube ou prova…
+              Digite um nome, clube ou prova…
             </Link>
             <div className="mt-3 flex flex-wrap gap-2">
               {UFS.map((u) => (
@@ -98,7 +97,7 @@ export function SearchSection() {
               {ranking.length === 0 && (
                 <tr>
                   <td colSpan={2} className="px-5 py-6 text-center text-secondary">
-                    Sem resultados cadastrados para {uf}.
+                    Ainda não temos resultados para {uf}.
                   </td>
                 </tr>
               )}
