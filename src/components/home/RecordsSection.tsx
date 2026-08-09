@@ -1,4 +1,5 @@
 import { RecordCard } from "@/components/ui/RecordCard";
+import { Carousel, CarouselItem } from "@/components/ui/Carousel";
 import { IMAGES } from "@/lib/images";
 import { getAtleta, getMelhorTempo, getProva } from "@/lib/mock-data";
 
@@ -26,16 +27,19 @@ export function RecordsSection() {
         <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance max-w-xl">
           Quando o esforço vira número.
         </h2>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {cards.map((c) => (
-            <RecordCard
-              key={c.registro}
-              image={IMAGES[c.imageKey]}
-              atleta={c.atleta}
-              provaNome={c.prova.nome}
-              tempoCentesimos={c.resultado.tempoCentesimos}
-            />
-          ))}
+        <div className="mt-10">
+          <Carousel>
+            {cards.map((c) => (
+              <CarouselItem key={c.registro} width="w-[220px] sm:w-[240px]">
+                <RecordCard
+                  image={IMAGES[c.imageKey]}
+                  atleta={c.atleta}
+                  provaNome={c.prova.nome}
+                  tempoCentesimos={c.resultado.tempoCentesimos}
+                />
+              </CarouselItem>
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>

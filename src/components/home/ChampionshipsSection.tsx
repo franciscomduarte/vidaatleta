@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChampionshipCard } from "@/components/ui/ChampionshipCard";
+import { Carousel, CarouselItem } from "@/components/ui/Carousel";
 import { CAMPEONATOS } from "@/lib/mock-data";
 import { IMAGES } from "@/lib/images";
 
@@ -29,10 +30,14 @@ export function ChampionshipsSection() {
             Ver calendário completo →
           </Link>
         </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {ordenados.map((c) => (
-            <ChampionshipCard key={c.id} image={IMAGES[IMAGE_KEY[c.id]]} campeonato={c} />
-          ))}
+        <div className="mt-10">
+          <Carousel>
+            {ordenados.map((c) => (
+              <CarouselItem key={c.id} width="w-[280px] sm:w-[300px]">
+                <ChampionshipCard image={IMAGES[IMAGE_KEY[c.id]]} campeonato={c} />
+              </CarouselItem>
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>

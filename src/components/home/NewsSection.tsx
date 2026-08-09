@@ -1,4 +1,5 @@
 import { NewsCard } from "@/components/ui/NewsCard";
+import { Carousel, CarouselItem } from "@/components/ui/Carousel";
 import { IMAGES } from "@/lib/images";
 
 const NOTICIAS = [
@@ -41,18 +42,21 @@ export function NewsSection() {
         <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight text-balance max-w-xl text-white">
           O que virou manchete essa semana.
         </h2>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {NOTICIAS.map((n) => (
-            <NewsCard
-              key={n.titulo}
-              image={IMAGES[n.imageKey]}
-              tag={n.tag}
-              data={n.data}
-              titulo={n.titulo}
-              resumo={n.resumo}
-              href={n.href}
-            />
-          ))}
+        <div className="mt-10">
+          <Carousel>
+            {NOTICIAS.map((n) => (
+              <CarouselItem key={n.titulo} width="w-[300px] sm:w-[340px]">
+                <NewsCard
+                  image={IMAGES[n.imageKey]}
+                  tag={n.tag}
+                  data={n.data}
+                  titulo={n.titulo}
+                  resumo={n.resumo}
+                  href={n.href}
+                />
+              </CarouselItem>
+            ))}
+          </Carousel>
         </div>
       </div>
     </section>
