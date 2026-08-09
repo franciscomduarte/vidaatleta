@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, Hanken_Grotesk } from "next/font/google";
 import Link from "next/link";
 import { MobileNav } from "@/components/MobileNav";
+import { LogoMark } from "@/components/ui/LogoMark";
 import "./globals.css";
 
 const sora = Sora({
@@ -50,7 +51,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-page text-primary">
         <header className="sticky top-0 z-40 bg-navy-950 text-white shadow-lg shadow-black/20">
           <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
-            <Link href="/" className="font-display font-extrabold text-lg tracking-tight">
+            <Link href="/" className="flex items-center gap-2.5 font-display font-extrabold text-lg tracking-tight">
+              <LogoMark className="h-8 w-8" />
               Vida de Atleta
             </Link>
             <nav className="hidden md:flex flex-wrap gap-x-6 text-sm font-medium text-white/70">
@@ -78,7 +80,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <footer className="bg-navy-950 text-white/70">
           <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 sm:grid-cols-[1.3fr_1fr_1fr]">
             <div>
-              <span className="font-display font-extrabold text-lg text-white">
+              <span className="flex items-center gap-2.5 font-display font-extrabold text-lg text-white">
+                <LogoMark className="h-7 w-7" />
                 Vida de Atleta
               </span>
               <p className="mt-3 max-w-xs text-sm leading-relaxed">
