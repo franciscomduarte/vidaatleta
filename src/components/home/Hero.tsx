@@ -58,9 +58,9 @@ export function Hero() {
           </div>
           <Link
             href="/competicoes"
-            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-coral hover:text-coral/80"
+            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-coral-on-dark hover:text-coral-on-dark/80"
           >
-            <span className="h-2 w-2 rounded-full bg-coral animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-coral-on-dark animate-pulse" />
             A prova está rolando — acompanhe
             <span aria-hidden>→</span>
           </Link>

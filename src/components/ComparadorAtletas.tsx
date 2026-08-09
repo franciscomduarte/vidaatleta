@@ -59,6 +59,7 @@ export function ComparadorAtletas({
       </Card>
 
       <Card className="mt-6 overflow-hidden">
+        <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left text-xs font-semibold uppercase tracking-wide text-secondary">
@@ -104,6 +105,7 @@ export function ComparadorAtletas({
             )}
           </tbody>
         </table>
+        </div>
       </Card>
     </div>
   );

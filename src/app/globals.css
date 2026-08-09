@@ -7,6 +7,7 @@
   --lime-500: #f5b301; /* dourado da marca (CTAs, destaques) */
   --lime-600: #cf9600; /* dourado mais profundo (hover, badges) */
   --coral-500: #d32f2f; /* vermelho de erro/urgência */
+  --coral-400: #ff6b6b; /* coral claro — texto de urgência sobre navy escuro (contraste AA) */
   --green-500: #009c49; /* verde (tempo mais rápido) */
   --navy-950: #0a1b3d; /* navy da marca (fundo hero/header/footer) */
   --navy-900: #0f2350; /* navy um tom mais claro, para cards sobre navy-950 */
@@ -28,6 +29,7 @@
   --time-slower: var(--coral-500);
   --time-record: var(--lime-600);
   --coral: var(--coral-500);
+  --coral-on-dark: var(--coral-400);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,6 +55,7 @@
   --color-time-slower: var(--time-slower);
   --color-time-record: var(--time-record);
   --color-coral: var(--coral);
+  --color-coral-on-dark: var(--coral-on-dark);
   --color-navy-950: var(--navy-950);
   --color-navy-900: var(--navy-900);
   --color-navy-800: var(--navy-800);

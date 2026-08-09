@@ -47,33 +47,35 @@ export default async function CampeonatoPage({
             <div className="border-b border-subtle px-5 py-3">
               <h2 className="font-display font-bold">{lista[0].prova.nome}</h2>
             </div>
-            <table className="w-full text-sm">
-              <tbody>
-                {lista
-                  .sort((a, b) => a.resultado.colocacao - b.resultado.colocacao)
-                  .map((r) => (
-                    <tr key={r.resultado.id} className="border-t border-subtle first:border-t-0">
-                      <td className="px-5 py-3 w-10 font-display font-bold tabular-nums">
-                        {r.resultado.colocacao}
-                      </td>
-                      <td className="px-5 py-3">
-                        <Link
-                          href={`/atleta/${r.resultado.atletaRegistro}`}
-                          className="font-semibold hover:text-brand"
-                        >
-                          {getAtleta(r.resultado.atletaRegistro)?.nome ?? r.resultado.atletaRegistro}
-                        </Link>
-                      </td>
-                      <td className="px-5 py-3 text-right font-display font-semibold tabular-nums">
-                        {formatTempo(r.resultado.tempoCentesimos)}
-                      </td>
-                      <td className="px-5 py-3 text-right">
-                        {r.resultado.recordePessoal && <Badge tone="record">PB</Badge>}
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <tbody>
+                  {lista
+                    .sort((a, b) => a.resultado.colocacao - b.resultado.colocacao)
+                    .map((r) => (
+                      <tr key={r.resultado.id} className="border-t border-subtle first:border-t-0">
+                        <td className="px-5 py-3 w-10 font-display font-bold tabular-nums">
+                          {r.resultado.colocacao}
+                        </td>
+                        <td className="px-5 py-3">
+                          <Link
+                            href={`/atleta/${r.resultado.atletaRegistro}`}
+                            className="font-semibold hover:text-brand"
+                          >
+                            {getAtleta(r.resultado.atletaRegistro)?.nome ?? r.resultado.atletaRegistro}
+                          </Link>
+                        </td>
+                        <td className="px-5 py-3 text-right font-display font-semibold tabular-nums">
+                          {formatTempo(r.resultado.tempoCentesimos)}
+                        </td>
+                        <td className="px-5 py-3 text-right">
+                          {r.resultado.recordePessoal && <Badge tone="record">PB</Badge>}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
           </Card>
         ))}
         {resultados.length === 0 && (

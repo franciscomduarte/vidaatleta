@@ -55,7 +55,7 @@ export function LiveSection() {
       />
       <div className="relative mx-auto max-w-6xl px-6 py-20 grid gap-12 lg:grid-cols-2 items-center">
         <div>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-coral">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-coral-on-dark">
             <AoVivoPulse />
             Rolando agora
           </span>
