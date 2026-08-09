@@ -1,17 +1,19 @@
 export type ImageRef = {
   src: string | null;
   alt: string;
+  credit?: string;
 };
 
 /**
  * Ponto único de referência para toda imagem do site. `src: null` renderiza
  * o fallback elegante do <ImageFrame> (gradiente + rótulo) em vez de uma
  * imagem quebrada — troque por um caminho em /public/images/... quando
- * tiver a foto real; nada mais no layout precisa mudar.
+ * tiver o acervo licenciado próprio; nada mais no layout precisa mudar.
  *
- * Não usamos fotos de bancos de imagem de terceiros (Unsplash/Pexels) aqui
- * para não depender de fetch externo nem de créditos — os slots ficam
- * como fallback até você colar o acervo licenciado.
+ * As fotos atuais em /public/images vêm do Wikimedia Commons (licenças
+ * CC BY / CC BY-SA / domínio público, sem pessoas identificáveis nem
+ * marcas de competição) — crédito de cada uma no campo `credit` e listado
+ * no rodapé do site, como as licenças exigem.
  */
 export const IMAGES: Record<string, ImageRef> = {
   "hero.main": {
@@ -24,50 +26,61 @@ export const IMAGES: Record<string, ImageRef> = {
   },
 
   "news.marina-recorde": {
-    src: null,
-    alt: "Marina Costa na saída dos 50m Livre",
+    src: "/images/news.marina-recorde.jpg",
+    alt: "Água de piscina esguichando sob luz de sol",
+    credit: "Nenad Stojkovic, CC BY 2.0, via Wikimedia Commons",
   },
   "news.interclubes-cobertura": {
-    src: null,
-    alt: "Piscina do Campeonato Brasileiro Interclubes 2026",
+    src: "/images/news.interclubes-cobertura.jpg",
+    alt: "Raias e blocos de partida de uma piscina olímpica vazia",
+    credit: "KeepActive Australia, CC BY-SA 4.0, via Wikimedia Commons",
   },
   "news.calendario-temporada": {
-    src: null,
-    alt: "Largada em bloco de partida, piscina olímpica",
+    src: "/images/news.calendario-temporada.jpg",
+    alt: "Piscina pública vista de cima, raias vazias",
+    credit: "KeepActive Australia, CC BY-SA 4.0, via Wikimedia Commons",
   },
 
   "records.marina-costa": {
-    src: null,
-    alt: "Marina Costa, recorde pessoal nos 50m Livre",
+    src: "/images/records.marina-costa.jpg",
+    alt: "Raia de piscina vista em ângulo, sem atletas",
+    credit: "KeepActive Australia, CC BY-SA 4.0, via Wikimedia Commons",
   },
   "records.pedro-henrique": {
-    src: null,
-    alt: "Pedro Henrique Lima, recorde pessoal nos 100m Livre",
+    src: "/images/records.pedro-henrique.jpg",
+    alt: "Vista subaquática de uma piscina vazia",
+    credit: "Steven Lek, domínio público, via Wikimedia Commons",
   },
   "records.gabriel-rocha": {
-    src: null,
-    alt: "Gabriel Rocha, recorde pessoal nos 100m Borboleta",
+    src: "/images/records.gabriel-rocha.jpg",
+    alt: "Piscina coberta, vista geral",
+    credit: "localfitness.com.au, CC BY-SA 3.0, via Wikimedia Commons",
   },
   "records.thiago-almeida": {
-    src: null,
-    alt: "Thiago Almeida, recorde pessoal nos 200m Livre",
+    src: "/images/records.thiago-almeida.jpg",
+    alt: "Água de piscina esguichando sob luz de sol",
+    credit: "Nenad Stojkovic, CC BY 2.0, via Wikimedia Commons",
   },
 
   "championships.brasileiro-interclubes-2026": {
-    src: null,
-    alt: "Capa do Campeonato Brasileiro Interclubes 2026",
+    src: "/images/championships.brasileiro-interclubes-2026.jpg",
+    alt: "Raias e blocos de partida de uma piscina olímpica vazia",
+    credit: "KeepActive Australia, CC BY-SA 4.0, via Wikimedia Commons",
   },
   "championships.trofeu-brasil-juvenil-2026": {
-    src: null,
-    alt: "Capa do Troféu Brasil Juvenil 2026",
+    src: "/images/championships.trofeu-brasil-juvenil-2026.jpg",
+    alt: "Piscina pública vista de cima, raias vazias",
+    credit: "KeepActive Australia, CC BY-SA 4.0, via Wikimedia Commons",
   },
   "championships.circuito-estadual-rs-2etapa": {
-    src: null,
-    alt: "Capa do Circuito Estadual RS · 2ª Etapa",
+    src: "/images/championships.circuito-estadual-rs-2etapa.jpg",
+    alt: "Vista subaquática de uma piscina vazia",
+    credit: "Steven Lek, domínio público, via Wikimedia Commons",
   },
   "championships.copa-sudeste-2026": {
-    src: null,
-    alt: "Capa da Copa Sudeste de Natação 2026",
+    src: "/images/championships.copa-sudeste-2026.jpg",
+    alt: "Piscina coberta, vista geral",
+    credit: "localfitness.com.au, CC BY-SA 3.0, via Wikimedia Commons",
   },
 };
 

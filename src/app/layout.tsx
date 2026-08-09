@@ -93,8 +93,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <FooterColumn title="Atletas" items={FOOTER_ATLETAS} />
           </div>
           <div className="border-t border-white/10">
-            <div className="mx-auto max-w-6xl px-6 py-5 text-xs">
-              © {new Date().getFullYear()} Vida de Atleta
+            <div className="mx-auto max-w-6xl px-6 py-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-xs text-white/40">
+              <span>© {new Date().getFullYear()} Vida de Atleta</span>
+              <span>
+                Fotos: Nenad Stojkovic (CC BY 2.0) · KeepActive Australia (CC
+                BY-SA 4.0) · Steven Lek · localfitness.com.au (CC BY-SA 3.0) —
+                via Wikimedia Commons
+              </span>
             </div>
           </div>
         </footer>
