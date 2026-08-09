@@ -1,11 +1,32 @@
-import PageStub from "@/components/PageStub";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { ComparadorAtletas } from "@/components/ComparadorAtletas";
+import { getAtletaLogado } from "@/lib/session";
 
-export default function CompararPage() {
+export default async function CompararPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ adversario?: string }>;
+}) {
+  const { adversario } = await searchParams;
+  const atletaLogado = getAtletaLogado();
+
   return (
-    <PageStub
-      from="L3Swim"
-      title="Comparar atletas"
-      description="Comparação de tempos entre dois atletas por prova/categoria, equivalente a comparativo_atletas.php. Requer o vínculo real atleta↔usuário logado (ainda simulado no L3Swim) antes de ligar ao login do próprio atleta."
-    />
+    <div className="mx-auto max-w-4xl px-6 py-14">
+      <SectionHeader
+        eyebrow="Cabeça a cabeça"
+        title="Comparar atletas"
+        description="Tempos lado a lado por prova — equivalente a comparativo_atletas.php do L3Swim, agora resolvido a partir da sessão do atleta logado em vez de um registro fixo no código."
+      />
+
+      {atletaLogado ? (
+        <div className="mt-8">
+          <ComparadorAtletas atletaLogado={atletaLogado} adversarioInicial={adversario} />
+        </div>
+      ) : (
+        <p className="mt-8 text-secondary">
+          Nenhum atleta logado (configure NEXT_PUBLIC_MOCK_ATLETA_REGISTRO).
+        </p>
+      )}
+    </div>
   );
 }
