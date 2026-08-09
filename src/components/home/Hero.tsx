@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PhoneMock } from "./PhoneMock";
 
@@ -6,11 +7,26 @@ const CHIPS = ["Tempos oficiais", "Rankings por UF e nacional", "Competições a
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy-950">
+      <Image
+        src="/hero-underwater.jpg"
+        alt="Nadador em prova de nado livre, vista subaquática"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(100deg, var(--navy-950) 28%, rgba(0,16,59,0.75) 55%, rgba(0,16,59,0.35) 78%), linear-gradient(0deg, var(--navy-950) 0%, transparent 30%)",
+        }}
+      />
       <div
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           background:
-            "radial-gradient(ellipse 70% 60% at 80% 20%, rgba(13,76,203,0.35), transparent 60%), radial-gradient(ellipse 60% 50% at 10% 90%, rgba(207,233,43,0.12), transparent 60%)",
+            "radial-gradient(ellipse 70% 60% at 80% 20%, rgba(17,78,139,0.35), transparent 60%), radial-gradient(ellipse 60% 50% at 10% 90%, rgba(249,175,13,0.10), transparent 60%)",
         }}
       />
       <div className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28 grid gap-14 lg:grid-cols-[1.1fr_auto] lg:items-center">
