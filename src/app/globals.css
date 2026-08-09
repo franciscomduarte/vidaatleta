@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* Identidade Vida de Atleta: navy escuro + dourado. */
-  --blue-500: #114e8b; /* azul secundário (links, botões outline) */
-  --blue-400: #72d2ff; /* ciano de contraste no escuro */
-  --lime-500: #f5b301; /* dourado da marca (CTAs, destaques) */
-  --lime-600: #cf9600; /* dourado mais profundo (hover, badges) */
-  --coral-500: #d32f2f; /* vermelho de erro/urgência */
+  /* Identidade oficial CBDA (produto Vida de Atleta, por CBDA) — cores
+     extraídas do CSS de produção do cbda.org.br. */
+  --blue-500: #114e8b; /* azul primário CBDA (AppBar, botões) */
+  --blue-400: #72d2ff; /* ciano de contraste CBDA, para uso no escuro */
+  --lime-500: #f9af0d; /* dourado CBDA (tag "natação", tiles, destaques) */
+  --lime-600: #e8b825; /* dourado mais profundo (gradiente, hover) */
+  --coral-500: #d32f2f; /* vermelho de erro/urgência do tema CBDA */
   --coral-400: #ff6b6b; /* coral claro — texto de urgência sobre navy escuro (contraste AA) */
-  --green-500: #009c49; /* verde (tempo mais rápido) */
-  --navy-950: #0a1b3d; /* navy da marca (fundo hero/header/footer) */
-  --navy-900: #0f2350; /* navy um tom mais claro, para cards sobre navy-950 */
-  --navy-800: #16305f; /* navy ainda mais claro, hover/superfícies elevadas */
+  --green-500: #009c49; /* verde CBDA (tag "nado artístico") */
+  --navy-950: #00103b; /* navy quase preto do dropdown CBDA */
+  --navy-900: #0d3e90; /* navy-azul do banner "medalhistas" CBDA */
+  --navy-800: #114e8b; /* azul primário, como superfície sobre navy-950 */
   --slate-100: #dde6f1;
   --slate-200: #c4d2e2;
   --slate-500: #51627a;

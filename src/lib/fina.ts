@@ -2,9 +2,8 @@ import type { Sexo } from "./types";
 
 /**
  * Tempos de referência (piscina 50m) usados na fórmula de pontos FINA/World
- * Aquatics: P = 1000 × (base / tempo)³ — mesma fórmula do L3Swim
- * (Indice::obterTempoReferenciaFINA). Valores aproximados para prototipagem,
- * não são a tabela oficial vigente.
+ * Aquatics: P = 1000 × (base / tempo)³. Valores aproximados para
+ * prototipagem, não são a tabela oficial vigente.
  */
 export const BASE_TIMES_CENTESIMOS: Record<string, Partial<Record<Sexo, number>>> = {
   "50-livre": { M: 2091, F: 2361 },

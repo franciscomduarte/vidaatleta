@@ -25,7 +25,7 @@ export default function CalculadoraPage() {
       <SectionHeader
         eyebrow="World Aquatics"
         title="Calculadora de pontos FINA"
-        description="P = 1000 × (base / tempo)³ — mesma fórmula do L3Swim (Indice::obterTempoReferenciaFINA)."
+        description="P = 1000 × (base / tempo)³, a fórmula oficial de pontuação FINA/World Aquatics."
       />
 
       <Card className="mt-8 p-6 space-y-5">

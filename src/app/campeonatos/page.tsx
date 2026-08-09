@@ -28,7 +28,7 @@ export default function CampeonatosPage() {
       <SectionHeader
         eyebrow="Histórico"
         title="Campeonatos"
-        description="Campeonatos importados, com acesso à tabela de resultados de cada um — equivalente a campeonatos.php do L3Swim."
+        description="Campeonatos importados, com acesso à tabela de resultados de cada um."
       />
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">

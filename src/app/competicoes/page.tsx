@@ -14,7 +14,7 @@ export default function CompeticoesPage() {
       <SectionHeader
         eyebrow="Tempo real"
         title="Competições"
-        description="Séries, raias e resultados assim que saem da piscina — a proposta 'ao vivo' do NADAR, sobre os dados de campeonato/resultado do L3Swim."
+        description="Séries, raias e resultados assim que saem da piscina — a proposta 'ao vivo' do NADAR."
       />
 
       <div className="mt-8 space-y-3">

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Sora, Hanken_Grotesk } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import { MobileNav } from "@/components/MobileNav";
-import { LogoMark } from "@/components/ui/LogoMark";
 import "./globals.css";
 
 const sora = Sora({
@@ -18,8 +18,9 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Vida de Atleta",
-  description: "Acompanhe atletas, tempos, rankings, provas e competições ao vivo em um só lugar.",
+  title: "Vida de Atleta | CBDA",
+  description:
+    "Produto oficial da CBDA: acompanhe atletas, tempos, rankings, provas e competições ao vivo em um só lugar.",
 };
 
 const NAV = [
@@ -51,9 +52,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-page text-primary">
         <header className="sticky top-0 z-40 bg-navy-950 text-white shadow-lg shadow-black/20">
           <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
-            <Link href="/" className="flex items-center gap-2.5 font-display font-extrabold text-lg tracking-tight">
-              <LogoMark className="h-8 w-8" />
-              Vida de Atleta
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="CBDA — Confederação Brasileira de Desportos Aquáticos"
+                width={28}
+                height={36}
+                priority
+                className="h-9 w-auto"
+              />
+              <span className="flex flex-col leading-none">
+                <span className="font-display font-extrabold text-lg tracking-tight">
+                  Vida de Atleta
+                </span>
+                <span className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-white/50">
+                  por CBDA
+                </span>
+              </span>
             </Link>
             <nav className="hidden md:flex flex-wrap gap-x-6 text-sm font-medium text-white/70">
               {NAV.map((item) => (
@@ -80,13 +95,27 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <footer className="bg-navy-950 text-white/70">
           <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 sm:grid-cols-[1.3fr_1fr_1fr]">
             <div>
-              <span className="flex items-center gap-2.5 font-display font-extrabold text-lg text-white">
-                <LogoMark className="h-7 w-7" />
-                Vida de Atleta
+              <span className="flex items-center gap-3">
+                <Image
+                  src="/logo.png"
+                  alt="CBDA — Confederação Brasileira de Desportos Aquáticos"
+                  width={28}
+                  height={36}
+                  className="h-9 w-auto"
+                />
+                <span className="flex flex-col leading-none">
+                  <span className="font-display font-extrabold text-lg text-white">
+                    Vida de Atleta
+                  </span>
+                  <span className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-white/50">
+                    por CBDA
+                  </span>
+                </span>
               </span>
               <p className="mt-3 max-w-xs text-sm leading-relaxed">
-                Onde o centésimo decide. Tempo oficial, ranking atualizado e a
-                prova inteira, do início ao fim.
+                Produto oficial da Confederação Brasileira de Desportos
+                Aquáticos. Onde o centésimo decide — tempo oficial, ranking
+                atualizado e a prova inteira, do início ao fim.
               </p>
             </div>
             <FooterColumn title="Produto" items={FOOTER_PRODUTO} />
@@ -94,7 +123,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </div>
           <div className="border-t border-white/10">
             <div className="mx-auto max-w-6xl px-6 py-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-xs text-white/40">
-              <span>© {new Date().getFullYear()} Vida de Atleta</span>
+              <span>© {new Date().getFullYear()} CBDA — Vida de Atleta</span>
               <span>
                 Fotos: Nenad Stojkovic (CC BY 2.0) · KeepActive Australia (CC
                 BY-SA 4.0) · Steven Lek · localfitness.com.au (CC BY-SA 3.0) —

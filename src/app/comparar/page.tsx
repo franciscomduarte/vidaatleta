@@ -15,7 +15,7 @@ export default async function CompararPage({
       <SectionHeader
         eyebrow="Cabeça a cabeça"
         title="Comparar atletas"
-        description="Tempos lado a lado por prova — equivalente a comparativo_atletas.php do L3Swim, agora resolvido a partir da sessão do atleta logado em vez de um registro fixo no código."
+        description="Tempos lado a lado por prova, resolvido a partir da sessão do atleta logado em vez de um registro fixo no código."
       />
 
       {atletaLogado ? (

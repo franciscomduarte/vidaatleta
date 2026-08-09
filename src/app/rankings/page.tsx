@@ -21,7 +21,7 @@ export default function RankingsPage() {
       <SectionHeader
         eyebrow="Ranking oficial"
         title="Rankings"
-        description="Melhor tempo de cada atleta por prova, filtrável por piscina — mesma lógica de tempos.php do L3Swim."
+        description="Melhor tempo de cada atleta por prova, filtrável por piscina."
       />
 
       <Card className="mt-8 p-5">

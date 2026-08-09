@@ -1,7 +1,6 @@
 import type { Atleta, Campeonato, Prova, Resultado } from "./types";
 
 // Dados de exemplo para prototipagem de tela — não são resultados oficiais.
-// Formato e nomenclatura seguem o schema atleta/campeonato/prova/resultado do L3Swim.
 
 export const PROVAS: Prova[] = [
   { id: "50-livre", nome: "50m Livre" },
