@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Sora, Hanken_Grotesk } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
-import { MobileNav } from "@/components/MobileNav";
+import { Header } from "@/components/layout/Header";
+import { Logo } from "@/components/layout/Logo";
 import "./globals.css";
 
 const sora = Sora({
@@ -23,14 +23,6 @@ export const metadata: Metadata = {
     "Produto oficial da CBDA: acompanhe atletas, tempos, rankings, provas e competições ao vivo em um só lugar.",
 };
 
-const NAV = [
-  { href: "/competicoes", label: "Competições" },
-  { href: "/rankings", label: "Rankings" },
-  { href: "/campeonatos", label: "Campeonatos" },
-  { href: "/comparar", label: "Comparar" },
-  { href: "/calculadora", label: "Calculadora FINA" },
-];
-
 const FOOTER_PRODUTO = [
   { href: "/rankings", label: "Rankings" },
   { href: "/competicoes", label: "Competições" },
@@ -50,59 +42,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sora.variable} ${hanken.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-page text-primary">
-        <header className="sticky top-0 z-40 bg-navy-950 text-white shadow-lg shadow-black/20">
-          <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
-                alt="CBDA — Confederação Brasileira de Desportos Aquáticos"
-                width={28}
-                height={36}
-                priority
-                className="h-9 w-auto"
-              />
-              <span className="flex flex-col leading-none">
-                <span className="font-display font-extrabold text-lg tracking-tight">
-                  Vida de Atleta
-                </span>
-                <span className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-white/50">
-                  por CBDA
-                </span>
-              </span>
-            </Link>
-            <nav className="hidden md:flex flex-wrap gap-x-6 text-sm font-medium text-white/70">
-              {NAV.map((item) => (
-                <Link key={item.href} href={item.href} className="hover:text-white">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-            <div className="flex items-center gap-3">
-              <span className="hidden sm:inline text-sm font-medium text-white/70">
-                Entrar
-              </span>
-              <Link
-                href="/buscar"
-                className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-navy-950 hover:brightness-95"
-              >
-                Localizar atleta
-              </Link>
-              <MobileNav items={NAV} />
-            </div>
-          </div>
-        </header>
+        <Header />
         <main className="flex-1">{children}</main>
         <footer className="bg-navy-950 text-white/70">
           <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 sm:grid-cols-[1.3fr_1fr_1fr]">
             <div>
               <span className="flex items-center gap-3">
-                <Image
-                  src="/logo.png"
-                  alt="CBDA — Confederação Brasileira de Desportos Aquáticos"
-                  width={28}
-                  height={36}
-                  className="h-9 w-auto"
-                />
+                <Logo className="h-9" />
                 <span className="flex flex-col leading-none">
                   <span className="font-display font-extrabold text-lg text-white">
                     Vida de Atleta
