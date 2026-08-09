@@ -16,7 +16,7 @@ export function Header() {
     <header className="sticky top-0 z-40 bg-navy-950 text-white shadow-lg shadow-black/20">
       <div className="relative mx-auto max-w-6xl px-6">
         {/* Escudo — âncora da marca, preso à barra mas transbordando por baixo dela */}
-        <div className="absolute left-4 sm:left-6 top-0 z-10 h-[72px] sm:h-28">
+        <div className="absolute left-4 sm:left-6 top-2 sm:top-3 z-10 h-[72px] sm:h-28">
           <Logo
             priority
             className="h-full drop-shadow-[0_8px_12px_rgba(0,0,0,0.45)]"
